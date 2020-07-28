@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4>Add New Picture</h4>
+<hr/>
+<form action="#" data-th-action="@{/add_picture}" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" id="file">
+    <input type="submit" value="Add">
+</form>
+
+<div data-th-each="picture : ${pictures}">
+    <img data-th-src="@{${picture.imagePath}}">
+</div>
+</body>
+</html>
